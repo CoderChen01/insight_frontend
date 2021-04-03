@@ -9,15 +9,15 @@
     <div class="all-count">
       <i class="el-icon-data-analysis"></i>
       当前总数据量：{{ allCount }}
-      <el-tooltip
-        class="delet-all-incidents"
-        effect="light"
-        content="点击删除当前所有数据"
-        placement="top">
-        <i class="el-icon-delete"
-           style="color: #409EFF; margin-left: 10px; cursor: pointer"
-           @click="handleDeleteAllIncidents"></i>
-      </el-tooltip>
+<!--      <el-tooltip-->
+<!--        class="delet-all-incidents"-->
+<!--        effect="light"-->
+<!--        content="点击删除当前所有数据"-->
+<!--        placement="top">-->
+<!--        <i class="el-icon-delete"-->
+<!--           style="color: #409EFF; margin-left: 10px; cursor: pointer"-->
+<!--           @click="handleDeleteAllIncidents"></i>-->
+<!--      </el-tooltip>-->
     </div>
     <!-- all conunt end -->
 
@@ -96,8 +96,12 @@
             <incident-card :key="index1"
                            :ref="index1"
                            :incident="incident"
-                           @deleteIncident="handleDeleteIncident"
                            @viewIncident="handleViewIncident">
+<!--            <incident-card :key="index1"-->
+<!--                           :ref="index1"-->
+<!--                           :incident="incident"-->
+<!--                           @deleteIncident="handleDeleteIncident"-->
+<!--                           @viewIncident="handleViewIncident">-->
             </incident-card>
           </template>
         </div>
@@ -457,47 +461,47 @@
         this.currentIncident = incident
         this.viewIncidentVisible = true
       },
-      handleDeleteIncident() {
-        this.handleSubmit()
-      },
-      handleDeleteAllIncidents() {
-        if (this.allCount === 0) {
-          return
-        }
-        const data = {}
-        if (this.cameraID) {
-          data.camera_id = this.cameraID
-        }
-        if (this.AISkillID) {
-          data.ai_skill_id = this.AISkillID
-        }
-        if (this.timeRange) {
-          data.time_range = this.timeRange
-        }
-        this.$confirm('将永久删除当前所有事件，是否继续？', '警告', {
-          cancelButtonText: '取消',
-          confirmButtonText: '确定',
-          type: 'warning'
-        })
-          .then(() => {
-            deleteAllIncidentsRequest(data, this.token)
-              .then(res => {
-                if (!res.code) {
-                  this.$message.error(res['error_msg'])
-                } else {
-                  this.handleSubmit()
-                  this.$message({
-                    type: 'success',
-                    message: '删除成功',
-                    duration: 1500
-                  })
-                }
-              })
-              .catch(err => {
-                this.$message.error('网络异常，请检查网络状况')
-              })
-          })
-      }
+      // handleDeleteIncident() {
+      //   this.handleSubmit()
+      // },
+      // handleDeleteAllIncidents() {
+      //   if (this.allCount === 0) {
+      //     return
+      //   }
+      //   const data = {}
+      //   if (this.cameraID) {
+      //     data.camera_id = this.cameraID
+      //   }
+      //   if (this.AISkillID) {
+      //     data.ai_skill_id = this.AISkillID
+      //   }
+      //   if (this.timeRange) {
+      //     data.time_range = this.timeRange
+      //   }
+      //   this.$confirm('将永久删除当前所有事件，是否继续？', '警告', {
+      //     cancelButtonText: '取消',
+      //     confirmButtonText: '确定',
+      //     type: 'warning'
+      //   })
+      //     .then(() => {
+      //       deleteAllIncidentsRequest(data, this.token)
+      //         .then(res => {
+      //           if (!res.code) {
+      //             this.$message.error(res['error_msg'])
+      //           } else {
+      //             this.handleSubmit()
+      //             this.$message({
+      //               type: 'success',
+      //               message: '删除成功',
+      //               duration: 1500
+      //             })
+      //           }
+      //         })
+      //         .catch(err => {
+      //           this.$message.error('网络异常，请检查网络状况')
+      //         })
+      //     })
+      // }
     },
   }
 </script>
