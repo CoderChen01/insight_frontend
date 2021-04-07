@@ -5,6 +5,7 @@
                :center="true"
                :show-close="false"
                :visible.sync="$_isVisible"
+               :close-on-click-modal="false"
                @close="handleClose"
                @opened="$refs.name.focus()">
       <el-form :model="createCameraGroupForm"

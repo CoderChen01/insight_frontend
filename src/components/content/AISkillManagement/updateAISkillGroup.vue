@@ -5,6 +5,7 @@
                :center="true"
                :show-close="false"
                :visible.sync="$_isVisible"
+               :close-on-click-modal="false"
                @close="$emit('update:isVisible', false)"
                @closed="handleClose(updated)"
                @open="updated = false"

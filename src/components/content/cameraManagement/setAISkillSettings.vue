@@ -4,6 +4,7 @@
                width="1050px"
                :center="true"
                :show-close="false"
+               :close-on-click-modal="false"
                style="user-select: none;"
                @open="getPreviewImage"
                @closed="handleClose"
