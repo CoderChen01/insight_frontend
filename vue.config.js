@@ -26,5 +26,7 @@ module.exports = {
       }
     }
   },
-  assetsDir: 'static'
+  assetsDir: 'static',
+  lintOnSave: false,
+  publicPath: "./",
 }

@@ -16,7 +16,7 @@
     <div class="ai-skill-data-table">
       <el-table :data="AISkillData"
                 row-key="ai_skill_id"
-                style="width: 100%; user-select: none">
+                style="width: 100%;">
         <template v-slot:empty>
           <empty-data>
             <template v-slot:emptyText>

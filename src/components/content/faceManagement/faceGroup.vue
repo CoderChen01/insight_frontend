@@ -13,7 +13,7 @@
     <div class="group-data-table">
       <el-table :data="faceGroupData"
                 row-key="face_group_id"
-                style="width: 100%; user-select: none">
+                style="width: 100%;">
         <template v-slot:empty>
           <empty-data>
             <template v-slot:emptyText>

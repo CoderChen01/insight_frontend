@@ -14,7 +14,7 @@
     <div class="group-data-table">
       <el-table :data="AISkillGroupData"
                 row-key="ai_skill_group_id"
-                style="width: 100%; user-select: none">
+                style="width: 100%;">
         <template v-slot:empty>
           <empty-data>
             <template v-slot:emptyText>
