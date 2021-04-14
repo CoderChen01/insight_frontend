@@ -122,7 +122,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'bash',
+  mode: 'hash',
   routes
 })
 
