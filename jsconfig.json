@@ -1,0 +1,32 @@
+{
+    "include": [
+        "./src/**/*"
+    ],
+    "allowJs": true,
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "components/*": [
+                "src/components/*"
+            ],
+            "assets/*": [
+                "src/assets/*"
+            ],
+            "api/*": [
+                "src/api/*"
+            ],
+            "views/*": [
+                "src/views/*"
+            ],
+            "store/*": [
+                "src/store/*"
+            ],
+            "common/*": [
+                "src/common/*"
+            ],
+            "utils/*": [
+                "src/utils/*"
+            ]
+        }
+    }
+}
