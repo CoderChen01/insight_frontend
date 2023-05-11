@@ -14,7 +14,7 @@
   .management-page {
     margin: 0 auto;
     padding: 15px;
-    width: 1134px;
+    width: 1200px;
     background: #FFFFFF;
     border: 1px solid #e6e6e6;
     border-radius: 6px;

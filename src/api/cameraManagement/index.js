@@ -1,4 +1,4 @@
-import {requests} from '../requests'
+import { requests } from '../requests'
 
 
 export const createCameraGroupRequest = (data, token) => {
@@ -132,6 +132,10 @@ export const cameraPreviewRequest = (data, token) => {
   })
     .then(res => res.data)
     .catch(err => Promise.reject(err))
+}
+
+export const cameraVideoPreviewURL = (cameraId, token) => {
+  return new URL(`camera-management/camera/video-preview?camera_id=${cameraId}&token=${token}`, requests.defaults.baseURL)
 }
 
 export const cameraSetAISkillSettingsRequest = (data, token) => {
